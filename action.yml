@@ -6,6 +6,28 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  api-key:  # id of input
+    description: 'API key obtained at the time of organization creation'
+    required: true
+  branch:  # id of input
+    description: 'API key obtained at the time of organization creation'
+    required: false
+  actor:  # id of input
+    description: 'actor'
+    required: false
+    default: "none"
+  repo:  # id of input
+    description: 'repo name'
+    required: true
+  org:  # id of input
+    description: 'org name'
+    required: true
+  commit-msg:  # id of input
+    description: 'commit id'
+    required: false
+  commit-sha:  # id of input
+    description: 'Commit id'
+    required: false
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -14,3 +36,10 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
+    - ${{ inputs.api-key }}
+    - ${{ inputs.branch }}
+    - ${{ inputs.actor }}
+    - ${{ inputs.repo }}
+    - ${{ inputs.org }}
+    - ${{ inputs.commit-msg }}
+    - ${{ inputs.commit-sha }}
