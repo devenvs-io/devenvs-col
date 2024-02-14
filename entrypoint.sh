@@ -1,27 +1,17 @@
 #!/bin/sh -l
 
-echo "Hello $1 $2 $3 $4 $5 $6 $7 $8"
-
-# who-to-greet="$1"
-# api-key="$2"
-# branch="$3"
-# actor="$4"
-# repo="$5"
-# org="$6"
-# commit-msg="$7"
-# commit-sha="$8"
+echo "Hello $1 $2 $3 $4 $5 $6 $7"
 
 # Constructing JSON payload
 json_payload=$(cat <<EOF
 {
-  "who-to-greet": "$1",
-  "api-key": "$2",
-  "branch": "$3",
-  "actor": "$4",
-  "repo": "$5",
-  "org": "$6",
-  "commit-msg": "$7",
-  "commit-sha": "$8"
+  "api-key": "$1",
+  "branch": "$2",
+  "actor": "$3",
+  "repo": "$4",
+  "org": "$5",
+  "commit-msg": "$6",
+  "commit-sha": "$7"
 }
 EOF
 )

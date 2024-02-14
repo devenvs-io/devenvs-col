@@ -2,10 +2,6 @@
 name: 'Devenvs Collector'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
   api-key:  # id of input
     description: 'API key obtained at the time of organization creation'
     required: true
@@ -35,7 +31,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
     - ${{ inputs.api-key }}
     - ${{ inputs.branch }}
     - ${{ inputs.actor }}

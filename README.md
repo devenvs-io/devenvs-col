@@ -1,12 +1,6 @@
 # Devenvs.io event collector action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
-
 ## Inputs
-
-## `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
 
 ## `api-key`
 ## `branch`
@@ -24,6 +18,12 @@ The time we greeted you.
 
 ## Example usage
 
-uses: actions/devenvs-col@v2
+uses: actions/devenvs-col@v6
 with:
-  who-to-greet: 'Mona the Octocat'
+  api-key: djwkdjwk93878322
+  branch: ${{ github.ref_name }}
+  actor: ${{ github.actor }}
+  repo: ${{ github.repository }}
+  org: ${{ github.repository_owner }}
+  commit-msg: ${{ github.event.head_commit.message }}
+  commit-sha: ${{ github.sha }}
