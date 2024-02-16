@@ -9,6 +9,7 @@
 ## `org`
 ## `commit-msg`
 ## `commit-sha`
+## `image`
 
 ## Outputs
 

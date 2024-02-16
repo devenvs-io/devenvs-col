@@ -24,6 +24,9 @@ inputs:
   commit-sha:  # id of input
     description: 'Commit id'
     required: false
+  image:  # id of input
+    description: 'Commit id'
+    required: false
 outputs:
   time: # id of output
     description: 'The time we greeted you'

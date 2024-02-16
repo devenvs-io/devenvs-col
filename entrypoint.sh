@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-echo "Hello $1 $2 $3 $4 $5 $6 $7"
+echo "Hello $1 $2 $3 $4 $5 $6 $7 $8"
 
 # Constructing JSON payload
 json_payload=$(cat <<EOF
@@ -11,7 +11,8 @@ json_payload=$(cat <<EOF
   "repo": "$4",
   "org": "$5",
   "commit-msg": "$6",
-  "commit-sha": "$7"
+  "commit-sha": "$7",
+  "image" : "$8"
 }
 EOF
 )
