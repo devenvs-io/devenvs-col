@@ -41,3 +41,4 @@ runs:
     - ${{ inputs.org }}
     - ${{ inputs.commit-msg }}
     - ${{ inputs.commit-sha }}
+    - ${{ inputs.image }}
