@@ -18,15 +18,15 @@ EOF
 )
 
 # API endpoint URL
-api_url="YOUR_API_ENDPOINT"
+api_url="$9"
 echo "******"
 echo $json_payload
 
 
-curl --location "$9" \
---header "Authorization: Bearer $1" \
---header 'Content-Type: application/json' \
---data "$json_payload"
+# curl --location "$9" \
+# --header "Authorization: Bearer $1" \
+# --header 'Content-Type: application/json' \
+# --data "$json_payload"
 
 # '{
 #     "branch": "main",
@@ -40,10 +40,10 @@ curl --location "$9" \
 
 
 # Using curl to send a POST request with the JSON payload
-# curl -X POST "$api_url" \
-#      -H "Content-Type: application/json" \
-#      -H "Authorization: Bearer $api_key" \
-#      -d "$json_payload"
+curl -X POST "$api_url" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Bearer $api_key" \
+     -d "$json_payload"
 
 time=$(date)
 echo "time=$time" >> $GITHUB_OUTPUT

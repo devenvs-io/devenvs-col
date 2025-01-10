@@ -20,6 +20,7 @@ The time we greeted you.
 
 ## Example usage
 
+```
 uses: actions/devenvs-col@v6
 with:
   api-key: djwkdjwk93878322
@@ -30,3 +31,4 @@ with:
   commit-msg: ${{ github.event.head_commit.message }}
   commit-sha: ${{ github.sha }}
   api-url: ${{ https://something.com/sonething}}
+```
