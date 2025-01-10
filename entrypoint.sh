@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-echo "Hello $1 $2 $3 $4 $5 $6 $7 $8 $9"
+echo "Hello $1 $2 $3 $4 $5 '$6' $7 $8 $9"
 # echo "Hello from the 2nd echo statement!"
 
 # Constructing JSON payload
