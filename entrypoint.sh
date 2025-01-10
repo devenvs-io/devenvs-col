@@ -40,11 +40,12 @@ echo $json_payload
 
 
 # Using curl to send a POST request with the JSON payload
-
+echo "Hello we're about to hit the post request!"
 curl -X POST "$api_url" \
         -H "Content-Type: application/json" \
         -H "x-api-key: $1" \
         -d "$json_payload" 
+echo "We have hit the post request!"
 
 time=$(date)
 echo "time=$time" >> $GITHUB_OUTPUT
