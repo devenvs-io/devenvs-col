@@ -42,9 +42,9 @@ echo $json_payload
 # Using curl to send a POST request with the JSON payload
 curl --location "https://14bf-113-193-219-183.ngrok-free.app" \
 
-curl -X POST "https://ddc0-113-193-219-183.ngrok-free.app/store-data" \
+curl -X POST "$9" \
         -H "Content-Type: application/json" \
-        -H "Authorization: Bearer $1" \
+        -H "x-api-key: $1" \
         -d '{
           "branch": "${{ github.ref_name }}",
           "actor": "${{ github.actor }}",
