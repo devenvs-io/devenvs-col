@@ -30,5 +30,5 @@ with:
   org: ${{ github.repository_owner }}
   commit-msg: ${{ github.event.head_commit.message }}
   commit-sha: ${{ github.sha }}
-  api-url: ${{ https://something.com/sonething}}
+  api-url: ${{ https://something.com/something }}
 ```
