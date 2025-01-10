@@ -40,10 +40,20 @@ echo $json_payload
 
 
 # Using curl to send a POST request with the JSON payload
-curl -X POST "$api_url" \
-     -H "Content-Type: application/json" \
-     -H "x-api-url: b5085fa3-dd88-4d14-b299-bc535a446c31" \
-     -d "$json_payload"
+curl --location "https://14bf-113-193-219-183.ngrok-free.app" \
+
+curl -X POST "https://ddc0-113-193-219-183.ngrok-free.app/store-data" \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $1" \
+        -d '{
+          "branch": "${{ github.ref_name }}",
+          "actor": "${{ github.actor }}",
+          "repo": "${{ github.repository }}",
+          "org": "${{ github.repository_owner }}",
+          "commitMsg": "${{ github.event.head_commit.message }}",
+          "commitSha": "${{ github.sha }}",
+          "image": "devarsh10/productcatalogservice:${{ env.IMAGE_TAG }}"
+        }'
 
 time=$(date)
 echo "time=$time" >> $GITHUB_OUTPUT
