@@ -1,6 +1,7 @@
 #!/bin/sh -l
 
 echo "Hello $1 $2 $3 $4 $5 $6 $7 $8 $9"
+echo "Hello from the 2nd echo statement!"
 
 # Constructing JSON payload
 json_payload=$(cat <<EOF
@@ -21,7 +22,7 @@ EOF
 api_url="$9"
 echo "******"
 echo $json_payload
-
+echo "Hi, I am here for debugging purpose!"
 
 # curl --location "$9" \
 # --header "Authorization: Bearer $1" \
