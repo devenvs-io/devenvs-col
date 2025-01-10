@@ -42,7 +42,7 @@ echo $json_payload
 # Using curl to send a POST request with the JSON payload
 curl -X POST "$api_url" \
      -H "Content-Type: application/json" \
-     -H "x-api-key: $1" \
+     -H "Authorization: Bearer b5085fa3-dd88-4d14-b299-bc535a446c31" \
      -d "$json_payload"
 
 time=$(date)
