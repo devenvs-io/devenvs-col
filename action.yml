@@ -24,6 +24,9 @@ inputs:
   commit-sha:  # id of input
     description: 'Commit id'
     required: false
+  api-url:  # id of input
+    description: 'API URL obtained at the time of organization creation'
+    required: true
   image:  # id of input
     description: 'Commit id'
     required: false
@@ -42,3 +45,4 @@ runs:
     - ${{ inputs.commit-msg }}
     - ${{ inputs.commit-sha }}
     - ${{ inputs.image }}
+    - ${{ inputs.api-url }}

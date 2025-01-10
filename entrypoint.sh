@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-echo "Hello $1 $2 $3 $4 $5 $6 $7 $8"
+echo "Hello $1 $2 $3 $4 $5 $6 $7 $8 $9"
 
 # Constructing JSON payload
 json_payload=$(cat <<EOF
@@ -11,7 +11,8 @@ json_payload=$(cat <<EOF
   "org": "$5",
   "commit-msg": "$6",
   "commit-sha": "$7",
-  "image" : "$8"
+  "image" : "$8",
+  "api-url" : "$9"
 }
 EOF
 )
@@ -22,7 +23,7 @@ echo "******"
 echo $json_payload
 
 
-curl --location 'https://platform-backend.devenvs.xyz/api/v1/webhooks/github_actions/' \
+curl --location "$9" \
 --header "Authorization: Bearer $1" \
 --header 'Content-Type: application/json' \
 --data "$json_payload"
