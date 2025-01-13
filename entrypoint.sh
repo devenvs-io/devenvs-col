@@ -10,8 +10,8 @@ json_payload=$(cat <<EOF
   "actor": "$3",
   "repo": "$4",
   "org": "$5",
-  "commit-msg": "$6",
-  "commit-sha": "$7",
+  "commitMsg": "$6",
+  "commitSha": "$7",
   "image" : "$8",
   "api-url" : "$9"
 }
