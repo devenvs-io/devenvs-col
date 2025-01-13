@@ -18,10 +18,10 @@ inputs:
   org:  # id of input
     description: 'org name'
     required: true
-  commit-msg:  # id of input
+  commitMsg:  # id of input
     description: 'commit id'
     required: false
-  commit-sha:  # id of input
+  commitSha:  # id of input
     description: 'Commit id'
     required: false
   api-url:  # id of input
