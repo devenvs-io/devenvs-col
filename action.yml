@@ -42,7 +42,7 @@ runs:
     - ${{ inputs.actor }}
     - ${{ inputs.repo }}
     - ${{ inputs.org }}
-    - ${{ inputs.commit-msg }}
-    - ${{ inputs.commit-sha }}
+    - ${{ inputs.commitMsg }}
+    - ${{ inputs.commitSha }}
     - ${{ inputs.image }}
     - ${{ inputs.api-url }}
